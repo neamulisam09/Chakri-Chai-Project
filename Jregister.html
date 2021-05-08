@@ -1,0 +1,71 @@
+<html>
+    <head>
+        <title>Jregister</title>
+
+        <link href="Style_R.css" rel="stylesheet" type ="text/css">
+
+
+    </head>
+    <body>
+
+
+        <!---bar part--->
+
+        <header>
+             <div class="banner">
+        <div class="navbar">
+             <a href="Home.html">
+            <img src="photo/logo.png" class="logo">
+                </a>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="Cregister.html">Post a Job</a></li>
+                <li><a href="Jlogin.html">Want a Job</a></li>
+                 <li><a href="Jlogin.html">Login</a></li>
+            </ul>
+            </div>
+            
+        </div>
+
+
+
+        </header>
+
+
+
+        <div class="signupbox">
+            <h1>Regester as Jobseeker</h1>
+        <form action="Jregister.php" method="post">
+                <p>First name</p>
+                <input type="text" name="fname" required placeholder="Enter First Name">
+                <p>Last name</p>
+                <input type="text" name="lname" required placeholder="Enter Last Name">
+                <p>User ID</p>
+                <input type="text" name="uid" required placeholder="Give a random User ID">
+                <p>Mobile Number</p>
+                <input type="text" name="mobile" required placeholder="Enter Mobile Number">
+                <p>Email</p>
+                <input type="email" name="mail" required placeholder="Enter Email">
+                <p>Address</p>
+                <input type="text" name="address" required placeholder="Enter Address">
+                <p>Country</p>
+                <input type="text" name="country" required placeholder="Enter Country">
+                <p>Date of Birth</p>
+                <input type="date" name="birthday" required placeholder="Enter Birth Date">
+                <p>Password</p>
+                <input type="password" name="pass" required placeholder="Enter Password">
+                <p>CV/Resume</p>
+                <input type="file" name="cv" required placeholder="Enter CV/ Resume">
+                <input type="submit" name="Create" value="Create Account">
+                <a href="Login.html">Already have an Account</a>
+                <input type="hidden" name="type" value='2'>
+
+ </form>
+        </div>
+
+    
+    
+    </body>
+</html>

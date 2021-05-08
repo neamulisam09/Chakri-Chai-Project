@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>Login</title>
+
+        <link href="Style_L.css" rel="stylesheet" type ="text/css">
+
+
+    </head>
+    <body>
+
+
+        <!---bar part--->
+
+        <header>
+             <div class="banner">
+        <div class="navbar">
+             <a href="Home.html">
+            <img src="photo/logo.png" class="logo">
+                </a>
+            <ul>
+                <li><a href="Home.html">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li><a href="Clogin.html">Post a Job</a></li>
+                <li><a href="Jregister.html">Want a Job</a></li>
+               
+            </ul>
+            </div>
+            
+        </div>
+
+
+
+        </header>
+
+
+
+        <div class="loginbox">
+        <h1>Login AS Company</h1>
+    <form action="Clogin.php" method="post">
+            <p>User ID</p>
+            <input type="text" name="uid" required placeholder="Enter User ID">
+            <p>Password</p>
+            <input type="password" name="pass" required placeholder="Enter Password">
+            <input type="hidden" name="type" value="1">
+            <input type="submit" name="" value="Login">
+        </form>
+            <a href="#">Forget your password?</a><br>
+            <a href="Jregister.html">Register as Jobseeker?</a><br>
+            <a href="Cregister.html">Register as Compony?</a>
+        
+    </div>
+    
+    
+    </body>
+</html>
