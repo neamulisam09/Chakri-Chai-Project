@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 25, 2021 at 12:39 AM
+-- Generation Time: May 25, 2021 at 10:29 AM
 -- Server version: 10.4.17-MariaDB
 -- PHP Version: 8.0.2
 
@@ -37,7 +37,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`aid`, `pass`) VALUES
-('admin', '1230');
+('admin', '1230'),
+('fowzia', '1234');
 
 -- --------------------------------------------------------
 
@@ -61,8 +62,31 @@ CREATE TABLE `company` (
 --
 
 INSERT INTO `company` (`cname`, `uid`, `lnumber`, `mobile`, `mail`, `address`, `country`, `pass`) VALUES
-('IT Solution', 1421, 1812090642, 1772267829, 'neamul.islam09@northsouth.edu', 'Pabna', 'Bangladesh', '1234'),
-('IT Bari', 33211, 1209874567, 987654321, 'afdsahj@gmail.com', 'Chitagong', 'Bangladesh', '212121');
+('IT Solution', 1421, 1812090642, 1772267829, 'neamul.islam09@northsouth.edu', 'Pabna', 'Bangladesh', '1234');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `jobapply`
+--
+
+CREATE TABLE `jobapply` (
+  `cname` varchar(20) NOT NULL,
+  `cid` int(20) NOT NULL,
+  `category` varchar(40) NOT NULL,
+  `jname` varchar(30) NOT NULL,
+  `juserid` int(20) NOT NULL,
+  `cv` longtext NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `jobapply`
+--
+
+INSERT INTO `jobapply` (`cname`, `cid`, `category`, `jname`, `juserid`, `cv`) VALUES
+('IT Solution', 1421, 'it', 'Rohom Mia', 1234, '5046.jpg'),
+('itech', 2332, 'it', 'Korim Mia', 1122, '5000.jpg'),
+('Unicorn', 3211, 'it', 'Rohim Mia', 7419, 'background.jpg');
 
 -- --------------------------------------------------------
 
@@ -119,7 +143,8 @@ CREATE TABLE `jobseeker` (
 INSERT INTO `jobseeker` (`fname`, `lname`, `uid`, `mobile`, `mail`, `address`, `country`, `birthday`, `pass`, `cv`) VALUES
 ('Mehedi', 'Hasan', 1209, 1772267829, 'mehedi@gmail.com', 'Pabna', 'Bangladesh', '2000-12-14', 1243, 'knowledge-library.jpg'),
 ('Partho', 'Biswas', 1234, 1988764564, 'parthobiswas@northsouth.edu', 'Dhaka', 'Bangladesh', '2000-05-15', 124300, 'sun.png'),
-('Rohim ', 'Mia', 7419, 1234567890, 'abcd@gmail.com', 'efgh', 'abcd', '2000-12-02', 1233, 'Facebook.png');
+('Rohim ', 'Mia', 7419, 1234567890, 'abcd@gmail.com', 'efgh', 'abcd', '2000-12-02', 1233, 'Facebook.png'),
+('Partho', 'Biswas', 77777, 2147483647, 'parthobiswas@northsouth.edu', 'Dhaka', 'Bangladesh', '2000-12-12', 66666, 'Screenshot (272).png');
 
 --
 -- Indexes for dumped tables
@@ -130,6 +155,12 @@ INSERT INTO `jobseeker` (`fname`, `lname`, `uid`, `mobile`, `mail`, `address`, `
 --
 ALTER TABLE `company`
   ADD UNIQUE KEY `uid` (`uid`);
+
+--
+-- Indexes for table `jobapply`
+--
+ALTER TABLE `jobapply`
+  ADD UNIQUE KEY `cid` (`cid`);
 
 --
 -- Indexes for table `jobseeker`
