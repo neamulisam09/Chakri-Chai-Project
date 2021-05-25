@@ -10,7 +10,7 @@
 
         $pass = $_POST['pass'];
 
-        $s = "select * from jregister where uid = '$uid' && pass = '$pass'";
+        $s = "select * from jobseeker where uid = '$uid' && pass = '$pass'";
 
         $result = mysqli_query($conn, $s);
 
@@ -20,9 +20,8 @@
 
             $_SESSION['uid'] = $uid;
 
-            echo"<h2>Login Succesfully</h2>";
-
+            echo "<script>window.location.assign('jHome.html');</script>";
     }else{
-        echo"<h2>Invalif User Id or Password</h2>";
+          echo "<script>window.location.assign('jerrorlogin.html');</script>";
     }
 ?>

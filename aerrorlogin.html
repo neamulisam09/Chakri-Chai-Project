@@ -1,6 +1,6 @@
 <html>
     <head>
-        <title>Login</title>
+        <title>AdminLogin</title>
 
         <link href="Style_L.css" rel="stylesheet" type ="text/css">
 
@@ -35,18 +35,18 @@
 
 
         <div class="loginbox">
-        <h1>Login AS Jobseeker</h1>
-    <form action="jlogin.php" method="post">
-            <p>User ID</p>
-            <input type="text" name="uid" required placeholder="Enter User ID">
+        <h1>Login AS Admin</h1>
+             <h2>User Name Or Password is Invalid<br>Please Try Again</h2>
+    <form action="AdminLogin.php" method="post">
+            <p>Admin ID</p>
+            <input type="text" name="aid" required placeholder="Enter Your ID">
             <p>Password</p>
             <input type="password" name="pass" required placeholder="Enter Password">
             <input type="hidden" name="type" value="1">
             <input type="submit" name="" value="Login">
         </form>
-            <a href="#">Forget your password?</a><br>
-            <a href="Jregister.html">Register as Jobseeker?</a><br>
-            <a href="Cregister.html">Register as Compony?</a>
+            <a href="Home.html">I am Not Admin!</a><br>
+           
         
     </div>
     

@@ -23,20 +23,19 @@ if(!empty($fname) ||!empty($lname) ||!empty($uid) ||!empty($mobile) ||!empty($ma
         die('Connection Error('.mysqli_connect_errno().')'.mysqli_connect_error());
     }else{
         
-        $sql = "INSERT INTO jregister (fname, lname, uid, mobile, mail, address, country, birthday, pass, cv) 
+        $sql = "INSERT INTO jobseeker (fname, lname, uid, mobile, mail, address, country, birthday, pass, cv) 
         values('$fname', '$lname', '$uid', '$mobile', '$mail', '$address', '$country', '$birthday', '$pass', '$cv')";
         
         if($conn->query($sql)){
-            echo "Welcome to our Member!!";
+            echo "<script>window.location.assign('jnHome.html');</script>";
         }
         else{
-            echo "Someone already register using this email or user id";
+           echo "<script>window.location.assign('jerrorreg.html');</script>";
         }
         $conn->close();
     }
 }else{
-    echo "Please fill-up the All information Correctly";
-    die();
+    echo "<script>window.location.assign('jerrorreg.html');</script>";
 }
 
 ?>

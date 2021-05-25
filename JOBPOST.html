@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="jobpost.css">
+    </head>
+
+<body>
+
+
+
+<a href= "cHome.html"> <h3 style="text-align:right; color:white">Home</h3> </a>
+    
+    <a href= "ABOUTUS.html"><h3 style="text-align:right; color:white">About Us</h3></a>
+    <a href= "CONTACT.html"><h3 style="text-align:right; color:white">Contact</h3></a>
+<a href= "Home.html"> <h3 style="text-align:right; color:white">Log Out</h3> </a>
+
+<p>
+<h2 style="text-align:"center">Company Job Detail</h2>
+ <div>
+  <form action=" jobpost.php" method="post">
+    <label for="cname">Company Name</label>
+    <input type="text" id="cname" required name="cname" placeholder="Name of the company..">
+</div> <br>
+ <div>
+    <label for="cid">Company Id</label>
+    <input type="text" id="cid" name="cid" required placeholder="Id of the company..">
+</div> <br>                                                                                          
+<div>
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="it">Information Technology</option>
+      <option value="hr">Human Resource</option>
+      <option value="finance">Finance</option>
+      </select>
+</div> <br>
+<div>
+    <label for="jtitle">Job Title</label>
+    <input type="text" id="jtitle" name="jtitle" required placeholder="Name of the job..">
+</div> <br>
+<div>
+    <label for="spackage">Salary Package</label>
+    <input type="text" id="spackage" name="spackage" required placeholder="salary..">
+</div> <br>
+<div>
+    <label for="srequired">Skill Required</label>
+    <input type="text" id="srequired" name="srequired" required>
+</div> <br>
+<div>
+    <label for="experience">Experience</label>
+    <input type="text" id="experience" name="experience" required placeholder="days,months or years..">
+
+</div> <br>
+<div>
+    <label for="jlocation">Job Location</label>
+    <input type="text" id="jlocation" name="jlocation" required placeholder="name of the city..">
+
+ </div> <br> 
+    
+  <div>
+    <input type="submit" value="Post">
+     </div>                                
+  </form>
+</div>
+    </p>
+</body>
+</html>

@@ -123,3 +123,10 @@
 .signupbox a:hover{
     color: #ffc107;
 }
+h2{
+     margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 15px;
+    color: red;
+}

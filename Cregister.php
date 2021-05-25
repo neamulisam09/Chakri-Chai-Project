@@ -21,20 +21,19 @@ if(!empty($cname) ||!empty($uid) ||!empty($lnumber) ||!empty($mobile) ||!empty($
         die('Connection Error('.mysqli_connect_errno().')'.mysqli_connect_error());
     }else{
         
-        $sql = "INSERT INTO cregister (cname, uid, lnumber, mobile, mail, address, country, pass) 
+        $sql = "INSERT INTO company (cname, uid, lnumber, mobile, mail, address, country, pass) 
         values('$cname', '$uid', '$lnumber', '$mobile', '$mail', '$address', '$country', '$pass')";
         
         if($conn->query($sql)){
-            echo "Welcome to our Member!!";
+             echo "<script>window.location.assign('cnHome.html');</script>";
         }
         else{
-            echo "Someone already register using this email or user id";
+            echo "<script>window.location.assign('cerrorreg.html');</script>";
         }
         $conn->close();
     }
 }else{
-    echo "Please fill-up the All information Correctly";
-    die();
+    echo "<script>window.location.assign('cerrorreg.html');</script>";
 }
 
 ?>

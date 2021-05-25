@@ -1,6 +1,6 @@
 <?php
 
-$uid = $_POST['uid'];
+$aid = $_POST['aid'];
 $pass = $_POST['pass'];
 
     $host = "localhost";
@@ -15,19 +15,20 @@ $pass = $_POST['pass'];
 if($conn->connect_error){
     die("Failed to Connect: ".$conn->connect_error);
 }else{
-    $stmt = $conn->prepare("select *from company where uid= ?");
-    $stmt->bind_param("i", $uid);
+    $stmt = $conn->prepare("select *from admin where aid= ?");
+    $stmt->bind_param("i", $aid);
     $stmt->execute();
     $stmt_result = $stmt->get_result();
     if($stmt_result->num_rows >0){
         $data= $stmt_result->fetch_assoc();
        if($data['pass']=== $pass) {
-           echo "<script>window.location.assign('WELCOMECOMPANY.html');</script>";
+             echo "<script>window.location.assign('aHome.html');</script>";
+                            
        }else{
-             echo "<script>window.location.assign('cerrorlogin.html');</script>";
+            echo "<script>window.location.assign('aerrorlogin.html');</script>";
        }
     }else{
-         echo "<script>window.location.assign('cerrorlogin.html');</script>";
+         echo "<script>window.location.assign('aerrorlogin.html');</script>";
     }
 }
 

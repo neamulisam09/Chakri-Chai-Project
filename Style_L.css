@@ -60,7 +60,7 @@
 
 .loginbox{
     width: 320px;
-    height: 420px;
+    height: 450px;
     background: #000;
     color: #fff;
     top: 50%;
@@ -125,4 +125,11 @@ h1{
 .loginbox a:hover
 {
     color: #ffc107;
+}
+h2{
+     margin: 0;
+    padding: 0 0 10px;
+    text-align: center;
+    font-size: 15px;
+    color: red;
 }
